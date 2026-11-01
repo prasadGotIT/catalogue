@@ -60,6 +60,7 @@ pipeline {
                 }               
             }
         }
+    }
         
     post{
         always{
@@ -76,4 +77,5 @@ pipeline {
             echo "pipeline is aborted"
         }
     }
+    
 }
