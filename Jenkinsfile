@@ -110,7 +110,7 @@ pipeline {
                 }               
             }
         }
-        stage('Trivy Scan'){
+        stage('Trivy Scan') {
             steps {
                 script {
                     sh """
