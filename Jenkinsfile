@@ -110,19 +110,18 @@ pipeline {
                 }               
             }
         }
-        stage('Trivy Scan') {
+        stage('Trivy Scan'){
             steps {
-                script {
+                script{
                     sh """
                         trivy image \
                         --scanners vuln \
-                        --severity HIGH,CRITICAL, MEDIUM \
+                        --severity HIGH,CRITICAL,MEDIUM \
                         --pkg-types os \
                         --exit-code 1 \
                         --format table \
                         ${acc_id}.dkr.ecr.us-east-1.amazonaws.com/${PROJECT}/${COMPONENT}:${appVersion}
                     """
-
                 }
             }
         }
