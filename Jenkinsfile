@@ -116,7 +116,7 @@ pipeline {
                     sh """
                         trivy image \
                         --scanners vuln \
-                        --sevrity HIGH,CRITICAL, MEDIUM \
+                        --severity HIGH,CRITICAL, MEDIUM \
                         --pkg-types os \
                         --exit-code 1 \
                         --format table \
